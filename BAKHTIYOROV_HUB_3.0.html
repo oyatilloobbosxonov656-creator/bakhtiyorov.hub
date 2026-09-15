@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>BAKHTIYOROV HUB 3.0</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;background:#070b14;color:#fff;overflow-x:hidden}
+body.light{background:#eef3f8;color:#111}
+nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;background:#080c16dd;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff18}
+.light nav{background:#ffffffdd}.logo{font-weight:900;font-size:22px;letter-spacing:2px}.logo span{color:#00e5ff}
+nav a{color:inherit;text-decoration:none;margin:0 8px;font-size:14px}.btn{border:0;border-radius:12px;padding:11px 16px;background:#00e5ff;color:#001018;font-weight:800;cursor:pointer}
+.hero{min-height:82vh;display:grid;place-items:center;text-align:center;padding:70px 20px;background:radial-gradient(circle at 50% 20%,#073d55 0,#070b14 45%,#070b14 100%)}
+.light .hero{background:radial-gradient(circle at 50% 20%,#bdefff,#eef3f8 60%)}
+.badge{display:inline-block;padding:8px 13px;border:1px solid #00e5ff66;border-radius:30px;color:#00e5ff;margin-bottom:15px}
+h1{font-size:clamp(42px,10vw,88px);margin:10px 0;font-weight:1000;letter-spacing:-4px}.hero p{max-width:720px;margin:auto;line-height:1.7;color:#b9c5d3}.light .hero p{color:#43505d}
+.grid{width:min(1100px,92%);margin:35px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:#101827cc;border:1px solid #ffffff12;border-radius:22px;padding:22px;box-shadow:0 15px 50px #0004}.light .card{background:#fff;border-color:#0001}
+.card h2,.card h3{margin-top:0}.muted{color:#91a0b3}.skill{margin:16px 0}.bar{height:10px;background:#253043;border-radius:20px;overflow:hidden}.fill{height:100%;background:#00e5ff;width:0;transition:1.2s}
+section{padding:25px 0}.title{text-align:center;font-size:34px;margin:25px}.clock{font-size:34px;font-weight:900;color:#00e5ff}
+.ai input,.ai textarea{width:100%;padding:14px;border-radius:12px;border:1px solid #ffffff18;background:#07101c;color:#fff;margin:8px 0}.light .ai input,.light .ai textarea{background:#f5f7fa;color:#111}
+.quick{display:flex;flex-wrap:wrap;gap:8px}.quick button{background:#17263a;color:#fff;border:1px solid #ffffff15;border-radius:10px;padding:9px;cursor:pointer}.answer{min-height:100px;margin-top:12px;padding:16px;border-radius:14px;background:#07111e;line-height:1.7}.light .answer{background:#edf2f6}
+.game{text-align:center}.score{font-size:25px}.big{font-size:55px;margin:15px}.projects .card{transition:.2s}.projects .card:hover{transform:translateY(-5px)}
+footer{text-align:center;padding:45px 20px;color:#8290a0}.toast{position:fixed;right:18px;bottom:18px;background:#00e5ff;color:#001018;padding:14px 18px;border-radius:12px;font-weight:bold;display:none;z-index:99}
+@media(max-width:650px){nav .links{display:none}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">BAKHTIYOROV<span>HUB</span></div><div class="links"><a href="#ai">AI</a><a href="#lab">IT LAB</a><a href="#games">O'YIN</a><a href="#projects">LOYIHALAR</a></div><button class="btn" onclick="toggleTheme()">☀️/🌙</button></nav>
+
+<header class="hero">
+<div><div class="badge">⚡ BAKHTIYOROV HUB 3.0</div><h1>MY DIGITAL WORLD</h1>
+<p>IT • DASTURLASH • AI • LOYIHALAR • TAJRIBA</p><br>
+<button class="btn" onclick="document.getElementById('ai').scrollIntoView()">🤖 AI DEMO</button>
+<button class="btn" onclick="toast('Xush kelibsiz! 🚀')">🚀 Boshlash</button>
+<div class="clock" id="clock"></div><div id="date" class="muted"></div></div>
+</header>
+
+<section><h2 class="title">👨‍💻 BAKHTIYOROV</h2>
+<div class="grid"><div class="card"><h3>Kim?</h3><p class="muted">IT va dasturlashga qiziqadigan, yangi texnologiyalarni o‘rganib, telefon orqali ham real loyihalar yaratishga intiladigan yosh texnologiya ishqibozi.</p></div>
+<div class="card"><h3>🎯 Maqsad</h3><p class="muted">Dasturlash, kiberxavfsizlik va AI yo‘nalishlarida kuchli bilim yig‘ib, o‘z loyihalarini yaratish.</p></div>
+<div class="card"><h3>⚙️ Ish muhiti</h3><p class="muted">Pydroid 3, HTML, CSS, JavaScript, Python va tajriba orqali o‘rganish.</p></div></div></section>
+
+<section id="skills"><h2 class="title">💻 IT SKILLS</h2><div class="grid"><div class="card">
+<div class="skill">Python <b>75%</b><div class="bar"><div class="fill" data-w="75"></div></div></div>
+<div class="skill">HTML/CSS <b>90%</b><div class="bar"><div class="fill" data-w="90"></div></div></div>
+<div class="skill">JavaScript <b>70%</b><div class="bar"><div class="fill" data-w="70"></div></div></div>
+<div class="skill">Cybersecurity <b>55%</b><div class="bar"><div class="fill" data-w="55"></div></div></div>
+</div></div></section>
+
+<section id="ai"><h2 class="title">🤖 AI DEMO</h2><div class="grid"><div class="card ai">
+<h3>BAKHTIYOROV AI</h3><p class="muted">Savol yozing yoki tayyor savollardan birini bosing.</p>
+<div class="quick">
+<button onclick="ask('BAKHTIYOROV kim?')">BAKHTIYOROV kim?</button><button onclick="ask('Python nima?')">Python</button><button onclick="ask('HTML nima?')">HTML</button><button onclick="ask('CSS nima?')">CSS</button><button onclick="ask('JavaScript nima?')">JavaScript</button><button onclick="ask('CPU nima?')">CPU</button><button onclick="ask('RAM va SSD farqi?')">RAM/SSD</button><button onclick="ask('API nima?')">API</button><button onclick="ask('Algoritm nima?')">Algoritm</button><button onclick="ask('Cybersecurity nima?')">Cybersecurity</button><button onclick="ask('AI nima?')">AI</button><button onclick="ask('Frontend va Backend nima?')">Frontend/Backend</button><button onclick="ask('Git nima?')">Git</button><button onclick="ask('Database nima?')">Database</button>
+</div>
+<input id="q" placeholder="Masalan: JavaScript nima?"><button class="btn" onclick="ask()">Savol berish</button>
+<div class="answer" id="answer">👋 Salom! Men BAKHTIYOROV HUB demo AI'siman. Savolingizni kutyapman.</div>
+</div></div></section>
+
+<section id="lab"><h2 class="title">🧪 IT LAB</h2><div class="grid">
+<div class="card"><h3>🧮 Kalkulyator</h3><input id="calc" placeholder="Masalan: 25*4+10"><button class="btn" onclick="calculate()">Hisobla</button><p id="calcOut"></p></div>
+<div class="card"><h3>🔐 Parol tekshirgich</h3><input id="pass" type="password" placeholder="Parol yozing"><button class="btn" onclick="checkPass()">Tekshir</button><p id="passOut"></p></div>
+<div class="card"><h3>🎨 Rang generator</h3><div id="colorBox" style="height:80px;border-radius:15px;background:#00e5ff"></div><button class="btn" onclick="newColor()">Yangi rang</button><p id="hex">#00E5FF</p></div>
+</div></section>
+
+<section id="games"><h2 class="title">🎮 MINI GAMES</h2><div class="grid">
+<div class="card game"><h3>⚡ 10 soniyalik Click Challenge</h3><div class="score">Ball: <span id="score">0</span></div><div class="big" id="timer">10</div><button class="btn" onclick="startGame()">START</button> <button class="btn" onclick="clickGame()">CLICK!</button><p id="gameMsg"></p></div>
+<div class="card game"><h3>🎯 Sonni top</h3><p>1–20 orasidagi sonni toping.</p><input id="guess" type="number"><button class="btn" onclick="guessNum()">Tekshir</button><p id="guessOut"></p></div>
+</div></section>
+
+<section id="projects"><h2 class="title">🚀 LOYIHALAR</h2><div class="grid projects">
+<div class="card"><h3>📱 Pydroid Projects</h3><p class="muted">Python, pygame, OpenCV va mobil dasturlash tajribalari.</p></div>
+<div class="card"><h3>🤖 AI Experiments</h3><p class="muted">Kamera, obyekt aniqlash va AI bilan bog‘liq tajribalar.</p></div>
+<div class="card"><h3>🌐 M-Geo</h3><p class="muted">Belgilar va yozuv tizimi g‘oyasi asosidagi ijodiy loyiha.</p></div>
+<div class="card"><h3>📚 Shabiston</h3><p class="muted">Hayotiy fikrlar, kuzatuvlar va qisqa ma’noli yozuvlar loyihasi.</p></div>
+</div></section>
+
+<footer>© 2026 BAKHTIYOROV HUB • Built with HTML + CSS + JavaScript<br><br><button class="btn" onclick="toast('BAKHTIYOROV HUB — davom etadi 🚀')">⚡ SYSTEM ONLINE</button></footer>
+<div class="toast" id="toast"></div>
+
+<script>
+const answers={
+"BAKHTIYOROV kim?":"BAKHTIYOROV — Baxtiyorov Mashhurbek. IT va dasturlashga qiziqadigan, yangi texnologiyalarni o‘rganib, Pydroid 3 orqali Python, HTML, CSS, JavaScript, AI va boshqa loyihalarni sinab ko‘rayotgan yosh texnologiya ishqibozi. Uning maqsadi — bilimini amaliy loyihalarga aylantirib, kuchli IT mutaxassisiga aylanish.",
+"Python nima?":"Python — o‘rganish nisbatan qulay, ko‘p maqsadli dasturlash tili. U avtomatlashtirish, web, AI, ma’lumotlar tahlili va o‘yinlar kabi yo‘nalishlarda ishlatiladi.",
+"HTML nima?":"HTML — web sahifaning tuzilishini yaratadigan belgilash tili.",
+"CSS nima?":"CSS — web sahifaning ko‘rinishi, ranglari, joylashuvi va dizaynini boshqaradi.",
+"JavaScript nima?":"JavaScript — web sahifaga interaktivlik va dinamik xatti-harakat qo‘shadigan dasturlash tili.",
+"CPU nima?":"CPU — kompyuterning markaziy protsessori. U dastur buyruqlarini bajaradi va hisob-kitoblarni amalga oshiradi.",
+"RAM va SSD farqi?":"RAM — dasturlar ishlayotgan paytdagi tezkor xotira. SSD — ma’lumotlarni uzoq muddat saqlaydigan doimiy xotira. SSD ma’lumotni saqlaydi, RAM esa ish jarayonida tezkor foydalaniladi.",
+"API nima?":"API — dasturlar bir-biri bilan ma’lumot yoki funksiyalar almashishi uchun ishlatiladigan interfeys.",
+"Algoritm nima?":"Algoritm — muammoni hal qilish uchun bajariladigan aniq va ketma-ket qadamlar to‘plami.",
+"Cybersecurity nima?":"Kiberxavfsizlik — kompyuterlar, tarmoqlar, dasturlar va ma’lumotlarni noqonuniy kirish hamda turli raqamli tahdidlardan himoyalash sohasi.",
+"AI nima?":"AI — sun’iy intellekt. U kompyuter tizimlariga ma’lumotdan o‘rganish, tahlil qilish va ayrim vazifalarni bajarish imkonini beradi.",
+"Frontend va Backend nima?":"Frontend — foydalanuvchi ko‘radigan va ishlatadigan web qism. Backend — server, ma’lumotlar bazasi va saytning ichki mantiqi bilan ishlaydigan qism.",
+"Git nima?":"Git — dasturchilarga kod o‘zgarishlarini kuzatish va loyihani versiyalar bo‘yicha boshqarish imkonini beradigan tizim.",
+"Database nima?":"Database — ma’lumotlarni tartibli saqlash, qidirish, o‘zgartirish va boshqarish uchun ishlatiladigan tizim."
+};
+function ask(x){let q=x||document.getElementById('q').value.trim();if(!q)return;let key=Object.keys(answers).find(k=>q.toLowerCase()==k.toLowerCase()||q.toLowerCase().includes(k.toLowerCase().replace('?','')));document.getElementById('answer').innerText=key?answers[key]:"Demo AI: Bu savol bo‘yicha hozircha tayyor javobim yo‘q. IT bo‘yicha Python, HTML, CSS, JavaScript, CPU, RAM, SSD, API, AI yoki Cybersecurity haqida so‘rashingiz mumkin.";document.getElementById('q').value=''}
+function toggleTheme(){document.body.classList.toggle('light');localStorage.theme=document.body.classList.contains('light')?'light':'dark'}
+if(localStorage.theme==='light')document.body.classList.add('light');
+function clock(){let d=new Date();document.getElementById('clock').innerText=d.toLocaleTimeString('uz-UZ');document.getElementById('date').innerText=d.toLocaleDateString('uz-UZ',{weekday:'long',year:'numeric',month:'long',day:'numeric'})}setInterval(clock,1000);clock();
+setTimeout(()=>document.querySelectorAll('.fill').forEach(x=>x.style.width=x.dataset.w+'%'),300);
+function calculate(){try{let v=document.getElementById('calc').value;if(!/^[0-9+*/().% -]+$/.test(v))throw 1;document.getElementById('calcOut').innerText='Natija: '+Function('return '+v)()}catch(e){document.getElementById('calcOut').innerText='Xato: ifodani tekshiring.'}}
+function checkPass(){let p=document.getElementById('pass').value,s=p.length+(p.match(/[A-Z]/)?2:0)+(p.match(/[0-9]/)?2:0)+(p.match(/[^A-Za-z0-9]/)?2:0);document.getElementById('passOut').innerText=s<6?'Zaif':'Yaxshi'} 
+function newColor(){let h='#'+Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');document.getElementById('colorBox').style.background=h;document.getElementById('hex').innerText=h.toUpperCase()}
+let score=0,playing=false,t=10;function startGame(){score=0;t=10;playing=true;document.getElementById('score').innerText=0;document.getElementById('gameMsg').innerText='Boshladik!';let z=setInterval(()=>{t--;document.getElementById('timer').innerText=t;if(t<=0){clearInterval(z);playing=false;document.getElementById('gameMsg').innerText='Tugadi! Natija: '+score}},1000)}function clickGame(){if(playing){score++;document.getElementById('score').innerText=score}}
+let secret=Math.floor(Math.random()*20)+1;function guessNum(){let g=+document.getElementById('guess').value;if(g===secret){document.getElementById('guessOut').innerText='🎉 To‘g‘ri! Yangi son tanlandi.';secret=Math.floor(Math.random()*20)+1}else document.getElementById('guessOut').innerText=g<secret?'⬆️ Kattaroq son.':'⬇️ Kichikroq son.'}
+function toast(t){let e=document.getElementById('toast');e.innerText=t;e.style.display='block';setTimeout(()=>e.style.display='none',1800)}
+</script>
+</body>
+</html>
